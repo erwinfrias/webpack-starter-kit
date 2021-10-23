@@ -31,8 +31,14 @@ module.exports = {
           { loader: MiniCssExtractPlugin.loader },
           { loader: 'css-loader' },
           { loader: 'postcss-loader' },
+          { loader: 'resolve-url-loader' },
           { loader: 'sass-loader', options: { sourceMap: true} }
         ]
+      },
+      {
+        test: /\.(ttf|eot|otf|woff2?)$/i,
+        type: 'asset/resource',
+        generator: { filename: 'assets/fonts/[name][ext]' }
       },
     ]
   },
