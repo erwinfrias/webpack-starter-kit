@@ -55,6 +55,11 @@ module.exports = {
         type: 'asset/resource',
         generator: { filename: 'assets/media/[name][ext]' }
       },
+      {
+        test: /\.(docx?|xlsx?|pptx?|pdf)$/i,
+        type: 'asset/resource',
+        generator: { filename: 'assets/docs/[name][ext]' }
+      }
     ]
   },
   plugins: [
