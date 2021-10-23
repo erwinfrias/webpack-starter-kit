@@ -50,6 +50,11 @@ module.exports = {
         type: 'asset/resource',
         generator: { filename: 'assets/videos/[name][ext]' }
       },
+      {
+        test: /\.(mp3)$/i,
+        type: 'asset/resource',
+        generator: { filename: 'assets/media/[name][ext]' }
+      },
     ]
   },
   plugins: [
