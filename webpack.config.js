@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -23,6 +24,10 @@ module.exports = {
         loader: 'pug-loader',
         options: { pretty: true }
       },
+      {
+        test: /\.css$/i,
+        use: [ MiniCssExtractPlugin.loader, 'css-loader' ]
+      },
     ]
   },
   plugins: [
@@ -30,5 +35,8 @@ module.exports = {
       template: './src/pug/pages/index.pug',
       inject: 'body',
     }),
+    new MiniCssExtractPlugin({
+      filename: './assets/css/main.css'
+    })
   ]
 };
