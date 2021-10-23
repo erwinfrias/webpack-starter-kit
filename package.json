@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/erwcode/webpack-starter-kit#readme",
   "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.3",
     "webpack": "^5.59.1",
     "webpack-cli": "^4.9.1"
   }
