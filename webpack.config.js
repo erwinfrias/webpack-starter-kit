@@ -44,7 +44,12 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg|webp|ico)$/i,
         type: 'asset/resource',
         generator: { filename: 'assets/images/[name][ext]' }
-      }
+      },
+      {
+        test: /\.(mp4)$/i,
+        type: 'asset/resource',
+        generator: { filename: 'assets/videos/[name][ext]' }
+      },
     ]
   },
   plugins: [
