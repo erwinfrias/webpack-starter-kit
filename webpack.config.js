@@ -18,11 +18,16 @@ module.exports = {
         test: /\.html$/i,
         loader: 'html-loader'
       },
+      {
+        test: /\.pug$/i,
+        loader: 'pug-loader',
+        options: { pretty: true }
+      },
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/pug/pages/index.pug',
       inject: 'body',
     }),
   ]
