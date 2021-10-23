@@ -8,6 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: './assets/js/[name].js'
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -25,8 +26,12 @@ module.exports = {
         options: { pretty: true }
       },
       {
-        test: /\.css$/i,
-        use: [ MiniCssExtractPlugin.loader, 'css-loader' ]
+        test: /\.(sa|sc|c)ss$/i,
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader', options: { sourceMap: true} }
+        ]
       },
     ]
   },

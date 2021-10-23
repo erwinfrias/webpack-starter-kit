@@ -1,6 +1,6 @@
 /*  CSS
 \*-------------------------------------------------------*/
-import css from './main.css'
+import scss from './scss/main.scss'
 
 
 

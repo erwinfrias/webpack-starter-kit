@@ -1,0 +1,17 @@
+.l-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq(m) {
+    max-width: 768px;
+  }
+
+  @include mq(l) {
+    max-width: 1024px;
+  }
+
+  @include mq(xl) {
+    max-width: 1200px;
+  }
+}
